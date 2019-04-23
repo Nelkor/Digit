@@ -3,9 +3,29 @@ import { connect, disconnect } from '../services/digit-service.js';
 const template =
 `
 <style>
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e6edeb;
+    }
+
+    .digits {
+        width: 100rem;
+        height: 20rem;
+        display: flex;
+    }
+
     .digit {
         color: #ccc;
-        background-color: #eee;
+        width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        font-size: 10rem;
     }
 
     .pos_0 {
@@ -24,17 +44,19 @@ const template =
     .pos_8 { color: #898; background-color: #efe; }
     .pos_9 { color: #999; background-color: #fff; }
 </style>
-<div id="wrapper">
-    <div class="digit">0</div>
-    <div class="digit">1</div>
-    <div class="digit">2</div>
-    <div class="digit">3</div>
-    <div class="digit">4</div>
-    <div class="digit">5</div>
-    <div class="digit">6</div>
-    <div class="digit">7</div>
-    <div class="digit">8</div>
-    <div class="digit">9</div>
+<div class="wrapper">
+    <div class="digits">
+        <div class="digit">0</div>
+        <div class="digit">1</div>
+        <div class="digit">2</div>
+        <div class="digit">3</div>
+        <div class="digit">4</div>
+        <div class="digit">5</div>
+        <div class="digit">6</div>
+        <div class="digit">7</div>
+        <div class="digit">8</div>
+        <div class="digit">9</div>
+    </div>
 </div>
 `;
 

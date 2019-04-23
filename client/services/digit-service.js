@@ -29,6 +29,8 @@ export const connect = observer => {
 
     observers[index] = observer;
 
+    observer(desired);
+
     return index;
 };
 

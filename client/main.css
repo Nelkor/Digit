@@ -27,7 +27,7 @@ nav {
     align-items: center;
     cursor: pointer;
     color: #fff;
-    background-color: rgb(41, 101, 74);
+    background-color: #29654A;
 }
 .link:hover {
     background-color: rgba(41, 101, 74, 0.7);
