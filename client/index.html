@@ -6,11 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Digits</title>
+    <link rel="stylesheet" href="main.css">
     <script type="module" src="main.js"></script>
 </head>
 <body>
-    <digit-waterfall></digit-waterfall>
-    <digit-radio></digit-radio>
-    <digit-comparisons></digit-comparisons>
+    <nav id="nav">
+        <div class="link" data-link="/">1</div>
+        <div class="link" data-link="/radio">2</div>
+        <div class="link" data-link="/comparison">3</div>
+        <div class="link" data-link="/">4</div>
+    </nav>
+    <router-outlet id="router" route="/"></router-outlet>
 </body>
 </html>
