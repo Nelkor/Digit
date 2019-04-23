@@ -1,3 +1,5 @@
+import { Router } from './services/router-service.js';
+
 import { DigitWaterfall } from './components/digit-waterfall.js';
 import { DigitRadio } from './components/digit-radio.js';
 import { DigitComparisons } from './components/digit-comparisons.js';
@@ -10,16 +12,16 @@ customElements.define('router-outlet', RouterOutlet);
 
 const init = () => {
     const nav = document.querySelector('#nav');
-    const router = document.querySelector('#router');
+    const outlet = document.querySelector('#router');
+    const router = new Router(outlet, nav);
 
-    router.setAttribute('route', location.pathname);
+    router.follow(location.pathname);
 
     nav.addEventListener('click', e => {
         const target = e.target;
         const link = target.dataset.link;
 
-        history.pushState(null, null, link);
-        router.setAttribute('route', link);
+        router.follow(link);
     });
 };
 

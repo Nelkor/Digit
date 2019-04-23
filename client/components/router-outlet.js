@@ -1,9 +1,3 @@
-const routes = {
-    '/': 'digit-waterfall',
-    '/radio': 'digit-radio',
-    '/comparisons': 'digit-comparisons',
-};
-
 const tags = tag => `<${tag}></${tag}>`;
 
 export class RouterOutlet extends HTMLElement
@@ -20,8 +14,6 @@ export class RouterOutlet extends HTMLElement
 
     attributeChangedCallback(name, oldValue, newValue)
     {
-        if ( ! routes[newValue]) newValue = '';
-
-        this.shadow_root.innerHTML = tags(routes[newValue]);
+        this.shadow_root.innerHTML = tags(newValue);
     }
 }
