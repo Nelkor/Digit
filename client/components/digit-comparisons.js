@@ -60,8 +60,6 @@ export class DigitComparisons extends HTMLElement
         const observer = desired => {
             digits.innerHTML = '';
 
-            console.log(desired);
-
             for (let i = 0; i < 10; i++) {
                 digits.innerHTML += compare(desired[i], desired[i + 1]);
             }

@@ -9,19 +9,20 @@ body {
     margin: 0;
     overflow: hidden;
     display: flex;
-
-    flex-direction: column;
+    flex-direction: row-reverse;
 }
 
 nav {
     display: flex;
     justify-content: center;
     background-color: #53836e;
+    flex-direction: column;
 }
 
 .link {
     width: 5rem;
-    height: 3rem;
+    height: 5rem;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;

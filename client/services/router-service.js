@@ -7,6 +7,10 @@ const routes = {
         tag: 'digit-radio',
         title: 'Радио',
     },
+    '/graphics': {
+        tag: 'digit-graphics',
+        title: 'Инфографика',
+    },
     '/comparisons': {
         tag: 'digit-comparisons',
         title: 'Сравнения',
