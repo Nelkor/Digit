@@ -9,14 +9,12 @@ body {
     margin: 0;
     overflow: hidden;
     display: flex;
-    flex-direction: row-reverse;
 }
 
 nav {
     display: flex;
     justify-content: center;
     background-color: #53836e;
-    flex-direction: column;
 }
 
 .link {

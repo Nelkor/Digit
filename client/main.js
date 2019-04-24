@@ -13,6 +13,7 @@ customElements.define('digit-comparisons', DigitComparisons);
 customElements.define('router-outlet', RouterOutlet);
 
 const init = () => {
+    const body = document.body;
     const nav = document.querySelector('#nav');
     const outlet = document.querySelector('#router');
     const router = new Router(outlet, nav);
@@ -25,6 +26,22 @@ const init = () => {
 
         router.follow(link);
     });
+
+    const resize = () => {
+        const clientWidth = document.documentElement.clientWidth;
+        const clientHeight = document.documentElement.clientHeight;
+
+        if (clientWidth > clientHeight) {
+            body.style.flexDirection = 'row-reverse';
+            nav.style.flexDirection = 'column';
+        } else {
+            body.style.flexDirection = 'column';
+            nav.style.flexDirection = 'row';
+        }
+    };
+
+    resize();
+    window.addEventListener('resize', resize);
 };
 
 document.addEventListener('DOMContentLoaded', init);
