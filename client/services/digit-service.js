@@ -3,7 +3,7 @@ let next_index = 0;
 const observers = {};
 
 const ws = () => {
-    const socket = new WebSocket('ws://localhost:8321');
+    const socket = new WebSocket('ws://nelkor.ru:8321');
 
     socket.onclose = () => setTimeout(ws, 1000);
     socket.onerror = () => socket.close();
